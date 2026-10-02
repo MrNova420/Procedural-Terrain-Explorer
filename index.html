@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>Procedural Terrain Explorer — Three.js & GLSL</title>
+  <meta name="description" content="Infinite procedural 3D landscape generated in real-time with Three.js, simplex noise, multi-LOD chunks, dynamic day-night atmosphere, and GLSL shaders." />
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/panel.css" />
+  <link rel="stylesheet" href="css/hud.css" />
+
+  <!-- Import map for Three.js and Addons via CDN -->
+  <script type="importmap">
+  {
+    "imports": {
+      "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+      "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"
+    }
+  }
+  </script>
+</head>
+<body>
+  <!-- 3D Canvas -->
+  <canvas id="webgl-canvas" tabindex="0"></canvas>
+
+  <!-- UI Root Container for HUD, Minimap, Start Screen, Help, and Panel -->
+  <div id="ui-root"></div>
+
+  <!-- WebGL Fallback Message -->
+  <noscript>
+    <div style="position:fixed;inset:0;background:#0b0f19;color:#fff;display:flex;align-items:center;justify-content:center;font-family:sans-serif;text-align:center;padding:20px;">
+      <h2>JavaScript & WebGL Required</h2>
+      <p>Please enable JavaScript and use a modern WebGL-compatible browser.</p>
+    </div>
+  </noscript>
+
+  <!-- Main ES Module Entry Point -->
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
